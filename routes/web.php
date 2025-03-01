@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/main', function () {
+    return view('main');
+})->name('main');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -18,5 +21,12 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('pokemons', 'PokemonsController')->middleware('auth');
+Route::get('pokemons/delete/{pokemon}', 'PokemonsController@destroy');
+Route::resource('objetos', 'ObjetosController');
+Route::get('objetos/delete/{objeto}', 'ObjetosController@destroy');
+Route::resource('tipos', 'TiposController');
+Route::get('tipos/delete/{tipo}', 'TiposController@destroy');
+Route::resource('generaciones', 'GeneracionesController');
+Route::get('generaciones/delete/{tipo}', 'GeneracionesController@destroy');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

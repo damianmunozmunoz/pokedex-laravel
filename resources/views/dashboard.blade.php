@@ -15,9 +15,3 @@
         </div>
     </div>
 </x-app-layout>
-@extends('layouts.app')
-
-@section('content')
-    <h1>Bienvenido al dashboard</h1>
-    <p>Esta sección solo es accesible para usuarios autenticados</p>
-@endsection
