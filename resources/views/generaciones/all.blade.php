@@ -6,7 +6,6 @@
 
 @section('content')
 
-@section('main_title', 'Lista de Generaciones')
 <table class="table table-striped table-secondary align-center">
     <tr>
         <th>Nombre</th>
@@ -21,7 +20,7 @@
             <td>{{ $generacion->fecha_añadido }}</td>
             <td><a class="btn btn-primary" href="{{ route('generaciones.edit', $generacion->id) }}">Editar</a></td>
             <td>
-                <form action="{{ route('generaciones.destroy', $generacion->id) }}">
+                <form action="{{ route('generaciones.destroy', $generacion->id) }}" method="POST">
                     @csrf
                     @method("DELETE")
                     <input class="btn btn-danger"  type="submit" value="Eliminar">

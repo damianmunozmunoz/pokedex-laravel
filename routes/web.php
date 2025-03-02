@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('pokemons', 'PokemonsController')->middleware('auth');
-Route::get('pokemons/delete/{pokemon}', 'PokemonsController@destroy');
+Route::get('pokemons/delete/{pokemon}', 'PokemonsController@destroy')->name('pokemons.myDestroy');
 Route::resource('objetos', 'ObjetosController');
 Route::get('objetos/delete/{objeto}', 'ObjetosController@destroy');
 Route::resource('tipos', 'TiposController');
