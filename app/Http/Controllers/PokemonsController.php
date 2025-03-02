@@ -2,26 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Generacion;
 use Illuminate\Http\Request;
-
+use App\Models\Tipo;
 use App\Models\Pokemon;
 class PokemonsController extends Controller
 {
     public function index()
     {
-        $listaPokemons = Pokemon::paginate(25);
+        $listaPokemons = Pokemon::with(['tipo','generacion','objeto'])->paginate(25);
         return view('pokemons/all', ['listaPokemons' => $listaPokemons]);
     }
-    /*
-    public function show($id) {
-        $p = Pokemon::find($id);
-        $data['pokemon'] = $p;
-        return view('pokemon.show', $data);
-    }
-    */
     public function create()
     {
-        return view('pokemons/form');
+        $tipo=Tipo::all();
+        $generacion=Generacion::all();
+        return view('pokemons/form', ['tipo' => $tipo], ['generacion' => $generacion]);
     }
     public function store(Request $r)
     {
@@ -33,13 +29,14 @@ class PokemonsController extends Controller
         $p->tipo = $r->tipo;
         $p->id_generacion = $r->id_generacion;
         $p->id_objeto = $r->id_objeto;
-        $p->id_equipo = $r->id_equipo;
         $p->save();
         return redirect()->route('pokemons.index');
     }
     public function edit($id){
         $pokemon = Pokemon::find($id);
-        return view('pokemons/form', ['pokemon' => $pokemon]);
+        $tipo=Tipo::all();
+        $generacion=Generacion::all();
+        return view('pokemons/form', ['pokemon' => $pokemon , 'tipo' => $tipo , 'generacion' => $generacion]);
     }
     public function update($id, Request $r){
         $p = Pokemon::find($id);
@@ -47,10 +44,9 @@ class PokemonsController extends Controller
         $p->peso = $r->peso;
         $p->altura = $r->altura;
         $p->genero = $r->genero;
-        $p->tipo = $r->tipo;
+        $p->id_tipo = $r->id_tipo;
         $p->id_generacion = $r->id_generacion;
         $p->id_objeto = $r->id_objeto;
-        $p->id_equipo = $r->id_equipo;
         $p->save();
         return redirect()->route('pokemons.index');
     }
