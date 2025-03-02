@@ -6,7 +6,6 @@
 
 @section('content')
 
-@section('main_title', 'Lista de Objetos')
 <table class="table table-striped table-secondary align-center">
     <tr>
         <th>Nombre</th>
@@ -19,7 +18,7 @@
             <td>{{ $objeto->descripcion }}</td>
             <td><a class="btn btn-primary" href="{{ route('objetos.edit', $objeto->id) }}">Editar</a></td>
             <td>
-                <form action="{{ route('objetos.destroy', $objeto->id) }}">
+                <form action="{{ route('objetos.destroy', $objeto->id) }}" method="POST">
                     @csrf
                     @method("DELETE")
                     <input class="btn btn-danger"  type="submit" value="Eliminar">
@@ -34,7 +33,7 @@
     </div>
     <a class="btn btn-success" href="{{ route('objetos.create') }}">Añadir Objeto</a>
     <form action="{{ route('main') }}">
-        <input class="btn btn-info" type="submit" value="MAIN">
+        <input class="btn btn-info" type="submit" value="MENÚ">
     </form>
 </div>
 @endsection

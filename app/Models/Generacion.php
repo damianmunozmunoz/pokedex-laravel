@@ -17,4 +17,5 @@ class Generacion extends Model
     public function tipo(){
         return $this->hasMany('App\Models\Tipo');
     }
+    protected $table='generacion';
 }
