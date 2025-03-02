@@ -7,6 +7,19 @@
     <body>
         <header>
             <h1 class="display-1">@yield('header')</h1>
+            <div class="usuario">
+                @auth
+                    {{ Auth::user()->name }}
+                    <a href="{{ route('profile.edit') }}" class="btn btn-success">Editar mi perfil</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Cerrar sesión</button>
+                    </form>
+                @else
+                    <a class="btn btn-success" href="{{ route('login') }}">Iniciar sesión</a>
+                    <a class="btn btn-success" href="{{ route('register')}}">Registrarse</a>
+                @endauth
+            </div>
         </header>
         <div class="bola">
         </div>
