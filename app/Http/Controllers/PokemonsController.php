@@ -39,7 +39,7 @@ class PokemonsController extends Controller
     }
     public function edit($id){
         $pokemon = Pokemon::find($id);
-        return view('pokemons/form', ['pokemon' => $pokemon]);
+        return view('pokemons.form', ['pokemon' => $pokemon]);
     }
     public function update($id, Request $r){
         $p = Pokemon::find($id);
