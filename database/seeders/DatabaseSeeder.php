@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             GeneracionTableSeeder::class,
             TiposTableSeeder::class,
             ObjetosTableSeeder::class,
+            HabilidadesTableSeeder::class,
             PokemonsTableSeeder::class
         ]);
     }

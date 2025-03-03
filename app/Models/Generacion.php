@@ -9,13 +9,15 @@ class Generacion extends Model
 {
 
     use SoftDeletes;
+
+    protected $fillable = ['nombre', 'cantidad', 'fecha_añadido'];
     
-    public function pokemon(){
-        return $this->hasMany('App\Models\Pokemon');
+    public function pokemons(){
+        return $this->hasMany(Pokemon::class);
     }
 
-    public function tipo(){
-        return $this->hasMany('App\Models\Tipo');
+    public function tipos(){
+        return $this->hasMany(Tipo::class);
     }
     protected $table='generacion';
 }

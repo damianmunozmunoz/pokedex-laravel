@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipos', function (Blueprint $table) {
+        Schema::create('habilidades', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->unsignedBigInteger('generacion_id');
-            
-            $table->foreign('generacion_id')->references('id')->on('generacion')->onDelete('cascade');
-            
+            $table->string('descripcion');
+            $table->date('fecha_añadido');
+            $table->string('rareza');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipos');
+        Schema::dropIfExists('habilidades');
     }
 };
