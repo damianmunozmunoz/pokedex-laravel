@@ -10,11 +10,13 @@ class Tipo extends Model
     
     use SoftDeletes;
 
+    protected $fillable = ['nombre', 'generacion_id'];
+
     public function pokemon(){
-        return $this->hasMany('App\Models\Pokemon');
+        return $this->hasMany(Pokemon::class);
     }
 
     public function generacion(){
-        return $this->belongsTo('App\Models\Generacion');
+        return $this->belongsTo(Generacion::class);
     }
 }

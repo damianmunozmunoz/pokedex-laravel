@@ -9,7 +9,10 @@ class Objeto extends Model
 {
 
     use SoftDeletes;
+
+    protected $fillable = ['nombre', 'descripcion'];
+    
     public function pokemon(){
-        return $this->hasMany('App\Models\Pokemon');
+        return $this->hasMany(Pokemon::class);
     }
 }

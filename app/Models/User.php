@@ -45,8 +45,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    public function equipo(){
-        return $this->hasOne('App\Models\Equipo');
-    }
 }
