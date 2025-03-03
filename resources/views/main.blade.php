@@ -22,6 +22,5 @@
         
         
         <input class="btn btn-primary btn-lg" type="submit" value="Entrenadores">
-        <input class="btn btn-primary btn-lg" type="submit" value="Equipos">
 </div>
 @endsection

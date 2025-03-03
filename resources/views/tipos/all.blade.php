@@ -6,7 +6,6 @@
 
 @section('content')
 
-@section('main_title', content: 'Lista de Objetos')
 <table class="table table-striped table-secondary align-center">
     <tr>
         <th>Nombre</th>
@@ -17,7 +16,7 @@
             <td>{{ $tipo->nombre }}</td>
             <td><a class="btn btn-primary" href="{{ route('tipos.edit', $tipo->id) }}">Editar</a></td>
             <td>
-                <form action="{{ route('tipos.destroy', $tipo->id) }}">
+                <form action="{{ route('tipos.destroy', $tipo->id) }}" method="POST">
                     @csrf
                     @method("DELETE")
                     <input class="btn btn-danger"  type="submit" value="Eliminar">

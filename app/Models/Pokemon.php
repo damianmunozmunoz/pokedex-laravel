@@ -12,19 +12,15 @@ class Pokemon extends Model
     use SoftDeletes;
 
     public function tipo(){
-        return $this->belongsTo('App\Models\Tipo');
+        return $this->belongsTo('App\Models\Tipo', 'id_tipo');
     }
 
     public function generacion(){
-        return $this->belongsTo('App\Models\Generacion');
+        return $this->belongsTo('App\Models\Generacion', 'id_generacion');
     }
 
     public function objeto(){
-        return $this->belongsTo('App\Models\Objeto');
-    }
-
-    public function equipo(){
-        return $this->belongsTo('App\Models\Equipo');
+        return $this->belongsTo('App\Models\Objeto', 'id_objeto');
     }
     protected $table = 'pokemons';
 }
