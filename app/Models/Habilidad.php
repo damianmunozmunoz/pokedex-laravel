@@ -15,4 +15,6 @@ class Habilidad extends Model
     public function pokemons(){
         return $this->hasMany(Pokemon::class);
     }
+
+    protected $table = 'habilidades';
 }

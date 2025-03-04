@@ -9,13 +9,12 @@ class ObjetosController extends Controller
     public function index()
     {
         $listaObjetos = Objeto::paginate(15);
-        return view('objetos/all', ['listaObjetos' => $listaObjetos]);
+        return view('objetos.all', ['listaObjetos' => $listaObjetos]);
     }
-    /* public function show() {
-    } */
+
     public function create()
     {
-        return view('objetos/form');
+        return view('objetos.form');
     }
     public function store(Request $r)
     {
@@ -28,7 +27,7 @@ class ObjetosController extends Controller
     public function edit($id)
     {
         $objeto = Objeto::find($id);
-        return view('objetos/form', ['objeto' => $objeto]);
+        return view('objetos.form', ['objeto' => $objeto]);
     }
     public function update($id,Request $r){
         $p = Objeto::find($id);
