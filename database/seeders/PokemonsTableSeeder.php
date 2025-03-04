@@ -18,8 +18,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Ivysaur',
@@ -28,8 +28,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2 
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Venusaur',
@@ -38,8 +38,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
         ]);
 
         // Línea evolutiva de tipo_id Fuego (Charmander)
@@ -50,18 +50,18 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Charmeleon',
-            'peso' => 19.0,
+            'peso' => 12.0,
             'altura' => 1.1,
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Charizard',
@@ -70,8 +70,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
         ]);
 
         // Generación 2: Johto
@@ -83,8 +83,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Bayleef',
@@ -93,8 +93,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
              
         ]);
         DB::table('pokemons')->insert([
@@ -104,8 +104,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
              
         ]);
 
@@ -117,19 +117,19 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Quilava',
-            'peso' => 19.0,
+            'peso' => 12.0,
             'altura' => 0.9,
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
         DB::table('pokemons')->insert([
@@ -139,8 +139,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
 
@@ -153,8 +153,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
         DB::table('pokemons')->insert([
@@ -164,8 +164,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
         DB::table('pokemons')->insert([
@@ -175,8 +175,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
 
@@ -188,19 +188,19 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
         DB::table('pokemons')->insert([
             'nombre' => 'Combusken',
-            'peso' => 19.5,
+            'peso' => 12.5,
             'altura' => 0.9,
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 17,
+            'habilidad_id' => 17
                   
         ]);
         DB::table('pokemons')->insert([
@@ -210,8 +210,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 18,
+            'habilidad_id' => 18
                   
         ]);
 
@@ -224,8 +224,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -235,8 +235,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
                   
         ]);
         DB::table('pokemons')->insert([
@@ -246,8 +246,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2
                   
         ]);
 
@@ -259,8 +259,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
                   
         ]);
         DB::table('pokemons')->insert([
@@ -270,8 +270,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
                   
         ]);
         DB::table('pokemons')->insert([
@@ -281,8 +281,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
                   
         ]);
 
@@ -295,8 +295,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
                   
         ]);
         DB::table('pokemons')->insert([
@@ -306,8 +306,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
                   
         ]);
         DB::table('pokemons')->insert([
@@ -317,8 +317,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
                   
         ]);
 
@@ -330,8 +330,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
                   
         ]);
         DB::table('pokemons')->insert([
@@ -341,8 +341,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
         DB::table('pokemons')->insert([
@@ -352,8 +352,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 5, // Teselia
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
 
@@ -366,8 +366,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -377,8 +377,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
         DB::table('pokemons')->insert([
@@ -388,8 +388,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 2, // Planta
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
 
@@ -401,8 +401,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
         DB::table('pokemons')->insert([
@@ -412,8 +412,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
         DB::table('pokemons')->insert([
@@ -423,8 +423,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 3, // Fuego
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 17,
+            'habilidad_id' => 17
                   
         ]);
 
@@ -436,8 +436,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 4, // Agua
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 18,
+            'habilidad_id' => 18
                   
         ]);
         DB::table('pokemons')->insert([
@@ -447,8 +447,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 4, // Agua
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -458,8 +458,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 4, // Agua
             'generacion_id' => 6, // Kalos
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
                   
         ]);
 
@@ -471,8 +471,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2
                   
         ]);
         DB::table('pokemons')->insert([
@@ -482,8 +482,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
                   
         ]);
         DB::table('pokemons')->insert([
@@ -493,8 +493,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
                   
         ]);
 
@@ -506,8 +506,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
                   
         ]);
         DB::table('pokemons')->insert([
@@ -517,8 +517,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
                   
         ]);
         DB::table('pokemons')->insert([
@@ -528,8 +528,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 5, // Eléctrico
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
                   
         ]);
 
@@ -541,8 +541,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 7, // Tierra
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
                   
         ]);
         DB::table('pokemons')->insert([
@@ -552,8 +552,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 7, // Tierra
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
                   
         ]);
 
@@ -565,8 +565,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 7, // Tierra
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
         DB::table('pokemons')->insert([
@@ -576,8 +576,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 7, // Tierra
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
         DB::table('pokemons')->insert([
@@ -587,8 +587,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 7, // Tierra
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
 
@@ -600,8 +600,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
         DB::table('pokemons')->insert([
@@ -611,8 +611,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
         DB::table('pokemons')->insert([
@@ -622,8 +622,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
 
@@ -635,8 +635,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
         DB::table('pokemons')->insert([
@@ -646,8 +646,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 17,
+            'habilidad_id' => 17
                   
         ]);
         DB::table('pokemons')->insert([
@@ -657,21 +657,21 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 8, // Roca
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 18,
+            'habilidad_id' => 18
                   
         ]);
 
         // Línea evolutiva de tipo_id Lucha (Machop)
         DB::table('pokemons')->insert([
             'nombre' => 'Machop',
-            'peso' => 19.5,
+            'peso' => 12.5,
             'altura' => 0.8,
             'genero' => 'Masculino',
             'tipo_id' => 9, // Lucha
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -681,8 +681,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 9, // Lucha
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
                   
         ]);
         DB::table('pokemons')->insert([
@@ -692,8 +692,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 9, // Lucha
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2
                   
         ]);
 
@@ -705,8 +705,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 9, // Lucha
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
                   
         ]);
         DB::table('pokemons')->insert([
@@ -716,21 +716,21 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 9, // Lucha
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
                   
         ]);
 
         // Línea evolutiva de tipo_id Psíquico (Abra)
         DB::table('pokemons')->insert([
             'nombre' => 'Abra',
-            'peso' => 19.5,
+            'peso' => 12.5,
             'altura' => 0.9,
             'genero' => 'Masculino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
                   
         ]);
         DB::table('pokemons')->insert([
@@ -740,8 +740,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
                   
         ]);
         DB::table('pokemons')->insert([
@@ -751,8 +751,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
                   
         ]);
 
@@ -764,8 +764,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
                   
         ]);
         DB::table('pokemons')->insert([
@@ -775,8 +775,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
                   
         ]);
         DB::table('pokemons')->insert([
@@ -786,8 +786,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 10, // Psíquico
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
 
@@ -799,8 +799,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 11, // Fantasma
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
         DB::table('pokemons')->insert([
@@ -810,8 +810,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 11, // Fantasma
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -821,8 +821,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 11, // Fantasma
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
 
@@ -834,8 +834,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 11, // Fantasma
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
         DB::table('pokemons')->insert([
@@ -845,8 +845,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 11, // Fantasma
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
 
@@ -858,8 +858,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 12, // Veneno
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
         DB::table('pokemons')->insert([
@@ -869,8 +869,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 12, // Veneno
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 17,
+            'habilidad_id' => 17
                   
         ]);
         DB::table('pokemons')->insert([
@@ -880,8 +880,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 12, // Veneno
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 18,
+            'habilidad_id' => 18
                   
         ]);
 
@@ -893,8 +893,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 12, // Veneno
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -904,8 +904,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 12, // Veneno
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
                   
         ]);
 
@@ -917,8 +917,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2
                   
         ]);
         DB::table('pokemons')->insert([
@@ -928,8 +928,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
                   
         ]);
         DB::table('pokemons')->insert([
@@ -939,8 +939,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
                   
         ]);
 
@@ -952,8 +952,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
                   
         ]);
         DB::table('pokemons')->insert([
@@ -963,8 +963,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
                   
         ]);
         DB::table('pokemons')->insert([
@@ -974,8 +974,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 13, // Hielo
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
                   
         ]);
 
@@ -987,8 +987,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
                   
         ]);
         DB::table('pokemons')->insert([
@@ -998,8 +998,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1009,8 +1009,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
 
@@ -1022,8 +1022,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1033,8 +1033,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1044,8 +1044,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 14, // Dragón
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
 
@@ -1057,8 +1057,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1068,8 +1068,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1079,8 +1079,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
 
@@ -1092,8 +1092,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 17,
+            'habilidad_id' => 17
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1103,8 +1103,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 18,
+            'habilidad_id' => 18
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1114,8 +1114,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 15, // Bicho
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
 
@@ -1127,8 +1127,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 1,
+            'habilidad_id' => 1
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1138,8 +1138,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 2,
+            'habilidad_id' => 2
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1149,8 +1149,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 3,
+            'habilidad_id' => 3
                   
         ]);
 
@@ -1162,8 +1162,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 4,
+            'habilidad_id' => 4
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1173,8 +1173,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 5,
+            'habilidad_id' => 5
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1184,8 +1184,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 16, // Acero
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 6,
+            'habilidad_id' => 6
                   
         ]);
 
@@ -1197,8 +1197,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 17, // Siniestro
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 7,
+            'habilidad_id' => 7
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1208,8 +1208,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 17, // Siniestro
             'generacion_id' => 3, // Hoenn
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 8,
+            'habilidad_id' => 8
                   
         ]);
 
@@ -1221,8 +1221,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 17, // Siniestro
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 9,
+            'habilidad_id' => 9
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1232,8 +1232,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 17, // Siniestro
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 10,
+            'habilidad_id' => 10
                   
         ]);
 
@@ -1245,8 +1245,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 11,
+            'habilidad_id' => 11
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1256,8 +1256,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 12,
+            'habilidad_id' => 12
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1267,8 +1267,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 1, // Kanto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 13,
+            'habilidad_id' => 13
                   
         ]);
 
@@ -1280,8 +1280,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 14,
+            'habilidad_id' => 14
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1291,8 +1291,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Femenino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 2, // Johto
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 15,
+            'habilidad_id' => 15
                   
         ]);
         DB::table('pokemons')->insert([
@@ -1302,8 +1302,8 @@ class PokemonsTableSeeder extends Seeder
             'genero' => 'Masculino',
             'tipo_id' => 18, // Hada
             'generacion_id' => 4, // Sinnoh
-            'objeto_id' => null,
-            'habilidad_id' => null
+            'objeto_id' => 16,
+            'habilidad_id' => 16
                   
         ]);
     }
