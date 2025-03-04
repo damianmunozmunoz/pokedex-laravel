@@ -6,37 +6,46 @@
 
 @section('content')
 
-<table class="table table-striped table-secondary align-center">
-    <tr>
-        <th>Nombre</th>
-        <th>Cantidad</th>
-        <th>Fecha Añadido</th>
-        <th colspan="2">Opciones</th>
-    </tr>
-    @foreach ($listaGeneraciones as $generacion)
-        <tr>
-            <td>{{ $generacion->nombre }}</td>
-            <td>{{ $generacion->cantidad }}</td>
-            <td>{{ $generacion->fecha_añadido }}</td>
-            <td><a class="btn btn-primary" href="{{ route('generaciones.edit', $generacion->id) }}">Editar</a></td>
-            <td>
-                <form action="{{ route('generaciones.destroy', $generacion->id) }}" method="POST">
-                    @csrf
-                    @method("DELETE")
-                    <input class="btn btn-danger"  type="submit" value="Eliminar">
-                </form>
-            </td>
-        </tr>
-    @endforeach
-</table><br>
-<div class="d-flex justify-content-around h-auto">
-    <div>
-        {{ $listaGeneraciones->links() }} <!-- Paginación -->
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Lista de generaciones</h2>
+        <table class="table table-striped table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Fecha_añadido</th>
+                    <th colspan="2">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($listaGeneraciones as $generacion)
+                    <tr>
+                        <td>{{ $generacion->nombre }}</td>
+                        <td>{{ $generacion->cantidad}}</td>
+                        <td>{{ $generacion->fecha_añadido->format('d/m/Y') }}</td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" href="{{ route('generaciones.edit', $generacion->id) }}">Editar</a>
+                        </td>
+                        <td>
+                            <form action="{{ route('generaciones.destroy', $generacion->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+                {{ $listaGeneraciones->links() }} <!-- Paginación -->
+            </div>
+            <a class="btn btn-success" href="{{ route('generaciones.create') }}">Añadir Generación</a>
+            <a class="btn btn-info" href="{{ route('main') }}">MENÚ</a>
+        </div>
     </div>
-    <a class="btn btn-success" href="{{ route('generaciones.create') }}">Nueva Generación</a>
-    <form action="{{ route('main') }}">
-        <input class="btn btn-info" type="submit" value="MAIN">
-    </form>
 </div>
-@endsection
 
+@endsection

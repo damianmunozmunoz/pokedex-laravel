@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
 Route::resource('pokemons', 'PokemonsController')->middleware('auth');
 Route::resource('objetos', 'ObjetosController');
 Route::resource('tipos', 'TiposController')->middleware('auth');
-Route::resource('generaciones', 'GeneracionesController')->middleware('auth');
-Route::resource('habilidades', 'HabilidadesController');
+Route::resource('generaciones', 'GeneracionesController')->middleware('auth')->parameters(['generaciones'=>'generacion']);
+Route::resource('habilidades', 'HabilidadesController')->parameters(['habilidades'=>'habilidad']);
 
 require __DIR__ . '/auth.php';

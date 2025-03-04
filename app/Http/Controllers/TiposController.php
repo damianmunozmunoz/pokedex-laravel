@@ -23,7 +23,7 @@ class TiposController extends Controller
     {
         $p = new Tipo();
         $p->nombre = $r->nombre;
-        $p->id_generacion = $r->id_generacion;
+        $p->generacion_id = $r->generacion_id;
         $p->save();
         return redirect()->route('tipos.index');
     }
@@ -35,7 +35,7 @@ class TiposController extends Controller
     public function update(string $id, Request $r){
         $p = Tipo::find($id);
         $p->nombre = $r->nombre;
-        $p->id_generacion = $r->id_generacion;
+        $p->generacion_id = $r->generacion_id;
         $p->save();
         return redirect()->route('tipos.index');
     }

@@ -2,7 +2,7 @@
 
 @section('title', 'Pokedex')
 
-@section('header', 'Objetos')
+@section('header', 'Tipos')
 
 @section('content')
 

@@ -2,7 +2,7 @@
 
 @section('title', 'Pokedex')
 
-@section('header', 'Habilidad')
+@section('header', 'Habilidades')
 
 @section('content')
 
@@ -24,7 +24,7 @@
                     <tr>
                         <td>{{ $habilidad->nombre }}</td>
                         <td>{{ $habilidad->descripcion}}</td>
-                        <td>{{ $habilidad->fecha_añadido }}</td>
+                        <td>{{ $habilidad->fecha_añadido->format('d/m/Y') }}</td>
                         <td>{{ $habilidad->rareza }}</td>
                         <td>
                             <a class="btn btn-warning btn-sm" href="{{ route('habilidades.edit', $habilidad->id) }}">Editar</a>
@@ -44,7 +44,7 @@
             <div>
                 {{ $listaHabilidades->links() }} <!-- Paginación -->
             </div>
-            <a class="btn btn-success" href="{{ route('habilidades.create') }}">Nuevo Pokémon</a>
+            <a class="btn btn-success" href="{{ route('habilidades.create') }}">Añadir Habilidad</a>
             <a class="btn btn-info" href="{{ route('main') }}">MENÚ</a>
         </div>
     </div>
