@@ -12,11 +12,6 @@ class ObjetosController extends Controller
         return view('objetos.all', ['listaObjetos' => $listaObjetos]);
     }
 
-    public function show($id) {
-        $objeto = Objeto::find($id);
-        return view('objetos.show', ['objeto' => $objeto]);
-    }
-
     public function create()
     {
         return view('objetos.form');

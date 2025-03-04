@@ -14,11 +14,6 @@ class TiposController extends Controller
         return view('tipos.all', ['listaTipos' => $listaTipos]);
     }
     
-    public function show(string $id) {
-        $tipo = Tipo::find($id);
-        return view('tipos.show', ['tipo' => $tipo]);
-    }
-    
     public function create()
     {
         $listaGeneraciones = Generacion::all();

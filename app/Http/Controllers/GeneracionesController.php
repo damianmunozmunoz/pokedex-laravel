@@ -12,11 +12,6 @@ class GeneracionesController extends Controller
         return view('generaciones.all', ['listaGeneraciones' => $listaGeneraciones]);
     }
 
-    public function show($id){
-        $generacion = Generacion::find($id);
-        return view('generaciones.show', ['generacion' => $generacion]);
-    }
-
     public function create()
     {
         return view('generaciones.form');
