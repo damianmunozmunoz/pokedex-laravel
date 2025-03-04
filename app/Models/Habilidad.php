@@ -12,6 +12,10 @@ class Habilidad extends Model
 
     protected $fillable = ['nombre', 'descripcion', 'fecha_añadido', 'rareza'];
 
+    protected $casts = [
+        'fecha_añadido' => 'date'
+    ];
+
     public function pokemons(){
         return $this->hasMany(Pokemon::class);
     }

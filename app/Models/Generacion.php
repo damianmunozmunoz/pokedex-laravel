@@ -11,6 +11,10 @@ class Generacion extends Model
     use SoftDeletes;
 
     protected $fillable = ['nombre', 'cantidad', 'fecha_añadido'];
+
+    protected $casts = [
+        'fecha_añadido' => 'date'
+    ];
     
     public function pokemons(){
         return $this->hasMany(Pokemon::class);
