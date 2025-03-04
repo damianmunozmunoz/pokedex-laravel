@@ -5,19 +5,29 @@ namespace App\Http\Controllers;
 use App\Models\Generacion;
 use Illuminate\Http\Request;
 use App\Models\Tipo;
+use App\Models\Objeto;
+use App\Models\Habilidad;
 use App\Models\Pokemon;
 class PokemonsController extends Controller
 {
     public function index()
     {
-        $listaPokemons = Pokemon::with(['tipo','generacion','objeto'])->paginate(25);
-        return view('pokemons/all', ['listaPokemons' => $listaPokemons]);
+        $listaPokemons = Pokemon::paginate(25);
+        return view('pokemons.all', ['listaPokemons' => $listaPokemons]);
     }
+
+    public function show(string $id){
+        $pokemon = Pokemon::find($id);
+        return view('pokemons.show', ['pokemon' => $pokemon]);
+    }
+
     public function create()
     {
-        $tipo=Tipo::all();
-        $generacion=Generacion::all();
-        return view('pokemons/form', ['tipo' => $tipo], ['generacion' => $generacion]);
+        $listaTipos = Tipo::all();
+        $listaGeneraciones = Generacion::all();
+        $listaObjetos = Objeto::all();
+        $listaHabilidades = Habilidad::all();
+        return view('pokemons.form', ['listaTipos' => $listaTipos, 'listaGeneraciones' => $listaGeneraciones, 'listaObjetos' => $listaObjetos, 'listaHabilidades' => $listaHabilidades]);
     }
     public function store(Request $r)
     {
@@ -26,15 +36,20 @@ class PokemonsController extends Controller
         $p->peso = $r->peso;
         $p->altura = $r->altura;
         $p->genero = $r->genero;
-        $p->tipo = $r->tipo;
-        $p->id_generacion = $r->id_generacion;
-        $p->id_objeto = $r->id_objeto;
+        $p->tipo_id = $r->tipo_id;
+        $p->generacion_id = $r->generacion_id;
+        $p->objeto_id = $r->objeto_id;
+        $p->habilidad_id = $r->habilidad_id;
         $p->save();
         return redirect()->route('pokemons.index');
     }
     public function edit($id){
         $pokemon = Pokemon::find($id);
-        return view('pokemons/form', ['pokemon' => $pokemon]);
+        $listaTipos = Tipo::all();
+        $listaGeneraciones = Generacion::all();
+        $listaObjetos = Objeto::all();
+        $listaHabilidades = Habilidad::all();
+        return view('pokemons.form', ['pokemon' => $pokemon, 'listaTipos' => $listaTipos, 'listaGeneraciones' => $listaGeneraciones, 'listaObjetos' => $listaObjetos, 'listaHabilidades' => $listaHabilidades]);
     }
     public function update($id, Request $r){
         $p = Pokemon::find($id);
@@ -42,9 +57,10 @@ class PokemonsController extends Controller
         $p->peso = $r->peso;
         $p->altura = $r->altura;
         $p->genero = $r->genero;
-        $p->id_tipo = $r->id_tipo;
-        $p->id_generacion = $r->id_generacion;
-        $p->id_objeto = $r->id_objeto;
+        $p->tipo_id = $r->tipo_id;
+        $p->generacion_id = $r->generacion_id;
+        $p->objeto_id = $r->objeto_id;
+        $p->habilidad_id = $r->habilidad_id;
         $p->save();
         return redirect()->route('pokemons.index');
     }
