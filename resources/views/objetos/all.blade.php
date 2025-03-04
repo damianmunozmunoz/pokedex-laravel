@@ -6,35 +6,44 @@
 
 @section('content')
 
-<table class="table table-striped table-secondary align-center">
-    <tr>
-        <th>Nombre</th>
-        <th>Descripción</th>
-        <th colspan="2">Opciones</th>
-    </tr>
-    @foreach ($listaObjetos as $objeto)
-        <tr>
-            <td>{{ $objeto->nombre }}</td>
-            <td>{{ $objeto->descripcion }}</td>
-            <td><a class="btn btn-primary" href="{{ route('objetos.edit', $objeto->id) }}">Editar</a></td>
-            <td>
-                <form action="{{ route('objetos.destroy', $objeto->id) }}" method="POST">
-                    @csrf
-                    @method("DELETE")
-                    <input class="btn btn-danger"  type="submit" value="Eliminar">
-                </form>
-            </td>
-        </tr>
-    @endforeach
-</table><br>
-<div class="d-flex justify-content-around h-auto">
-    <div>
-        {{ $listaObjetos->links() }} <!-- Paginación -->
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Lista de Objetos</h2>
+        <table class="table table-striped table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th colspan="2">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($listaObjetos as $objeto)
+                    <tr>
+                        <td>{{ $objeto->nombre }}</td>
+                        <td>{{ $objeto->descripcion }}</td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" href="{{ route('objetos.edit', $objeto->id) }}">Editar</a>
+                        </td>
+                        <td>
+                            <form action="{{ route('objetos.destroy', $objeto->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                                <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+                {{ $listaObjetos->links() }} <!-- Paginación -->
+            </div>
+            <a class="btn btn-success" href="{{ route('objetos.create') }}">Añadir Objeto</a>
+            <a class="btn btn-info" href="{{ route('main') }}">MENÚ</a>
+        </div>
     </div>
-    <a class="btn btn-success" href="{{ route('objetos.create') }}">Añadir Objeto</a>
-    <form action="{{ route('main') }}">
-        <input class="btn btn-info" type="submit" value="MENÚ">
-    </form>
 </div>
-@endsection
 
+@endsection

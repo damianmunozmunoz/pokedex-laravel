@@ -99,7 +99,7 @@ class TiposTableSeeder extends Seeder
 
         DB::table('tipos')->insert([
             'nombre' => 'Hada',
-            'generacion_id' => 1
+            'generacion_id' => 6
         ]);
     }
 }

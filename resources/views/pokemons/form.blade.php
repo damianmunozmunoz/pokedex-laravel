@@ -21,7 +21,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Tipo:</label>
-                <input type="text" name="tipo" class="form-control" value="{{ $pokemon->tipo->nombre ?? '' }}">
+                <input type="text" name="tipo" class="form-control" value="{{ $pokemon->tipo->nombre ?? '' }}" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Peso:</label>
