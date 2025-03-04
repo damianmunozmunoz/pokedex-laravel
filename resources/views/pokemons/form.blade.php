@@ -10,7 +10,7 @@
         <h2 class="text-center mb-3">Formulario Pokémon</h2>
         @isset($pokemon)
             <form action="{{ route('pokemons.update', ['pokemon' => $pokemon->id]) }}" method="POST">
-            @method("PUT")
+            @method("PATCH")
         @else
             <form action="{{ route('pokemons.store') }}" method="POST">
         @endisset
@@ -21,7 +21,15 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Tipo:</label>
-                <input type="text" name="tipo" class="form-control" value="{{ $pokemon->tipo->nombre ?? '' }}" required>
+                <select name="tipo_id" class="form-select">
+                    @foreach($listaTipos as $tipo)
+                        <option value="{{ $tipo->id }}"
+                            @if( $tipo->id == ($pokemon->tipo_id ?? ""))
+                                selected
+                            @endif
+                        >{{ $tipo->nombre }}</option>
+                    @endforeach
+                </select>            
             </div>
             <div class="mb-3">
                 <label class="form-label">Peso:</label>
@@ -33,11 +41,46 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Género:</label>
-                <input type="text" name="genero" class="form-control" value="{{ $pokemon->genero ?? '' }}">
+                <select name="genero" class="form-select">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select> 
             </div>
             <div class="mb-3">
                 <label class="form-label">Generación:</label>
-                <input type="text" name="generacion" class="form-control" value="{{ $pokemon->generacion->nombre ?? '' }}">
+                <select name="generacion_id" class="form-select">
+                    @foreach($listaGeneraciones as $generacion)
+                        <option value="{{ $generacion->id }}"
+                            @if( $generacion->id == ($pokemon->generacion_id ?? ""))
+                                selected
+                            @endif
+                        >{{ $generacion->nombre }}</option>
+                    @endforeach
+                </select> 
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Habilidad:</label>
+                <select name="habilidad_id" class="form-select">
+                    @foreach($listaHabilidades as $habilidad)
+                        <option value="{{ $habilidad->id }}"
+                            @if( $habilidad->id == ($pokemon->habilidad_id ?? ""))
+                                selected
+                            @endif
+                        >{{ $habilidad->nombre }}</option>
+                    @endforeach
+                </select> 
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Objeto:</label>
+                <select name="objeto_id" class="form-select">
+                    @foreach($listaObjetos as $objeto)
+                        <option value="{{ $objeto->id }}"
+                            @if( $objeto->id == ($pokemon->objeto_id ?? ""))
+                                selected
+                            @endif
+                        >{{ $objeto->nombre }}</option>
+                    @endforeach
+                </select> 
             </div>
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn btn-success">Enviar</button>

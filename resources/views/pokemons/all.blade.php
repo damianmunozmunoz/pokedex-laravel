@@ -19,6 +19,7 @@
                     <th>Género</th>
                     <th>Generación</th>
                     <th>Habilidad</th>
+                    <th>Objeto</th>
                     <th colspan="2">Opciones</th>
                 </tr>
             </thead>
@@ -32,6 +33,7 @@
                         <td>{{ $pokemon->genero }}</td>
                         <td>{{ $pokemon->generacion->nombre ?? '' }}</td>
                         <td>{{ $pokemon->habilidad->nombre ?? '' }}</td>
+                        <td>{{ $pokemon->objeto->nombre ?? '' }}</td>
                         <td>
                             <a class="btn btn-warning btn-sm" href="{{ route('pokemons.edit', $pokemon->id) }}">Editar</a>
                         </td>
