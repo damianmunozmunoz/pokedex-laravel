@@ -24,7 +24,7 @@ class GeneracionesController extends Controller
         $p->cantidad = $r->cantidad;
         $p->fecha_añadido = $r->fecha_añadido;
         $p->save();
-        return redirect()->route(('generaciones.index'));
+        return redirect()->route('generaciones.index');
     }
     public function edit($id)
     {

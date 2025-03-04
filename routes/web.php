@@ -23,14 +23,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('pokemons', 'PokemonsController')->middleware('auth');
-Route::get('pokemons/delete/{pokemon}', 'PokemonsController@destroy')->name('pokemons.myDestroy');
 Route::resource('objetos', 'ObjetosController');
-Route::get('objetos/delete/{objeto}', 'ObjetosController@destroy');
 Route::resource('tipos', 'TiposController')->middleware('auth');
-Route::get('tipos/delete/{tipo}', 'TiposController@destroy');
 Route::resource('generaciones', 'GeneracionesController')->middleware('auth');
-Route::get('generaciones/delete/{tipo}', 'GeneracionesController@destroy');
-Route::resource('equipos', 'EquiposController')->middleware('auth');
-Route::get('equipos/delete/{equipo}', 'EquiposController@destroy');
+Route::resource('habilidades', 'HabilidadesController');
 
 require __DIR__ . '/auth.php';
