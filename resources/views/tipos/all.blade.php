@@ -8,7 +8,7 @@
 
 <div class="container mt-4">
     <div class="card shadow-lg p-4">
-        <h2 class="text-center mb-4">Lista de Objetos</h2>
+        <h2 class="text-center mb-4">Lista de Tipos</h2>
         <form action="{{ route('tipos.buscar') }}" method="GET" class="input-group mb-3">
             @csrf
             <input type="text" name="dato" class="form-control" placeholder="Busca el tipo">
