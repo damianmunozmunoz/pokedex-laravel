@@ -41,4 +41,13 @@ class ObjetosController extends Controller
         $p->delete();
         return redirect()->route('objetos.index');
     }
+
+    public function buscar(Request $r){
+        $dato = $r->input('dato');
+        $criterio = $r->input('criterio');
+
+        $objetos = Objeto::where($criterio, 'like', $dato)->get();
+        
+        return view('objetos.filtrar', ['objetos' => $objetos]);
+    }
 }

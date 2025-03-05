@@ -1,6 +1,10 @@
 <?php
 
-use App\Http\Controllers\EquiposController;
+use App\Http\Controllers\PokemonsController;
+use App\Http\Controllers\ObjetosController;
+use App\Http\Controllers\TiposController;
+use App\Http\Controllers\HabilidadesController;
+use App\Http\Controllers\GeneracionesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +27,14 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('pokemons', 'PokemonsController')->middleware('auth');
+Route::get('/buscarPokemons', [PokemonsController::class , 'buscar'])->name('pokemons.buscar');
 Route::resource('objetos', 'ObjetosController');
+Route::get('/buscarObjetos', [ObjetosController::class , 'buscar'])->name('objetos.buscar');
 Route::resource('tipos', 'TiposController')->middleware('auth');
+Route::get('/buscarTipos', [TiposController::class , 'buscar'])->name('tipos.buscar');
 Route::resource('generaciones', 'GeneracionesController')->middleware('auth')->parameters(['generaciones'=>'generacion']);
+Route::get('/buscarGeneraciones', [GeneracionesController::class , 'buscar'])->name('generaciones.buscar');
 Route::resource('habilidades', 'HabilidadesController')->parameters(['habilidades'=>'habilidad']);
+Route::get('/buscarHabilidades', [HabilidadesController::class , 'buscar'])->name('habilidades.buscar');
 
 require __DIR__ . '/auth.php';

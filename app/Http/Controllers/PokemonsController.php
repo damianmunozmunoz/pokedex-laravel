@@ -69,4 +69,28 @@ class PokemonsController extends Controller
         $p->delete();
         return redirect()->route('pokemons.index');
     }
+
+    public function buscar(Request $r){
+        $dato = $r->input('dato');
+
+        $pokemons = Pokemon::where('nombre', 'like', $dato)
+                            ->orWhere('peso', 'like', $dato)
+                            ->orWhere('altura', 'like', $dato)
+                            ->orWhere('genero', 'like', $dato)
+                            ->orWhereHas('tipo', function($consulta) use ($dato){
+                                $consulta->where('nombre', 'like', $dato);
+                            })->with('tipo')
+                            ->orWhereHas('generacion', function($consulta) use ($dato){
+                                $consulta->where('nombre', 'like', $dato);
+                            })->with('generacion')
+                            ->orWhereHas('habilidad', function($consulta) use ($dato){
+                                $consulta->where('nombre', 'like', $dato);
+                            })->with('habilidad')
+                            ->orWhereHas('objeto', function($consulta) use ($dato){
+                                $consulta->where('nombre', 'like', $dato);
+                            })->with('objeto')
+                            ->get();
+
+        return view('pokemons.filtrar', ['pokemons' => $pokemons]);
+    }
 }

@@ -22,7 +22,5 @@
     <form class="d-grid gap-3" action="{{ route('habilidades.index') }}" method="GET">
         <input class="btn btn-primary btn-lg" type="submit" value="Habilidades">
     </form>
-        
-        <input class="btn btn-primary btn-lg" type="submit" value="Entrenadores">
 </div>
 @endsection

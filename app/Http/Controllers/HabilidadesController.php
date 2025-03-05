@@ -46,4 +46,13 @@ class HabilidadesController extends Controller
         $h->delete();
         return redirect()->route('habilidades.index');
     }
+
+    public function buscar(Request $r){
+        $dato = $r->input('dato');
+        $criterio = $r->input('criterio');
+
+        $habilidades = Habilidad::where($criterio, 'like', $dato)->get();
+        
+        return view('habilidades.filtrar', ['habilidades' => $habilidades]);
+    }
 }

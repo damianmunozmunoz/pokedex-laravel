@@ -6,15 +6,7 @@
 
 @section('content')
 
-<div class="container mt-4">
-    <div class="card shadow-lg p-4">
-        <h2 class="text-center mb-4">Lista de Pokémon</h2>
-        <form action="{{ route('pokemons.buscar') }}" method="GET" class="input-group mb-3">
-            @csrf
-            <input type="text" name="dato" class="form-control" placeholder="Busca el pokemon">
-            
-            <button type="submit" class="btn btn-dark">Buscar</button>
-        </form>
+    @if(isset($pokemons))
         <table class="table table-striped table-hover text-center">
             <thead class="table-dark">
                 <tr>
@@ -29,8 +21,7 @@
                     <th colspan="2">Opciones</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach ($listaPokemons as $pokemon)
+                @forelse($pokemons as $pokemon)
                     <tr>
                         <td>{{ $pokemon->nombre }}</td>
                         <td>{{ $pokemon->tipo->nombre ?? ''}}</td>
@@ -50,18 +41,17 @@
                                 <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
                             </form>
                         </td>
+                </tr>
+                @empty
+                    <tr>
+                        <td colspan="9">No se encontraron resultados</td>    
                     </tr>
-                @endforeach
-            </tbody>
+                @endforelse
         </table>
         <div class="d-flex justify-content-between align-items-center mt-4">
-            <div>
-                {{ $listaPokemons->links() }} <!-- Paginación -->
-            </div>
             <a class="btn btn-success" href="{{ route('pokemons.create') }}">Nuevo Pokémon</a>
             <a class="btn btn-info" href="{{ route('main') }}">MENÚ</a>
         </div>
-    </div>
-</div>
+    @endif
 
 @endsection

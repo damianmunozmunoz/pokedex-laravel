@@ -45,4 +45,15 @@ class TiposController extends Controller
         return redirect()->route('tipos.index');
     }
 
+    public function buscar(Request $r){
+        $dato = $r->input('dato');
+
+        $tipos = Tipo::where('nombre', 'like', $dato)
+        ->orWhereHas('generacion', function($consulta) use ($dato){
+            $consulta->where('nombre', 'like', $dato);
+        })->with('generacion')
+        ->get();
+
+        return view('tipos.filtrar', ['tipos' => $tipos]);
+    }
 }

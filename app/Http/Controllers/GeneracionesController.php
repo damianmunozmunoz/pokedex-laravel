@@ -46,4 +46,13 @@ class GeneracionesController extends Controller
         $p->delete();
         return redirect()->route('generaciones.index');
     }
+
+    public function buscar(Request $r){
+        $dato = $r->input('dato');
+        $criterio = $r->input('criterio');
+
+        $generaciones = Generacion::where($criterio, 'like', $dato)->get();
+        
+        return view('generaciones.filtrar', ['generaciones' => $generaciones]);
+    }
 }
